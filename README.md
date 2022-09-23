@@ -24,7 +24,7 @@ $sudo dnf -y install oraclelinux-developer-release-el8
 ```
 $sudo yum-config-manager --enable ol8_developer
 ```
-* OCI client [(Consider configure previusly oci-cli to corroborate interaction with OCI Cloud)](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
+* OCI client ([Consider configure previusly oci-cli to corroborate interaction with OCI Cloud])(https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
 ```
 $sudo dnf install python36-oci-cli
 ```
@@ -40,8 +40,8 @@ Consider the lab can be performed on cloud shell console, or if you would ike to
 
 * **Oracle Linux Cloud Developer image**: The Terraform provider is pre-installed on the Oracle Linux Cloud Developer platform image. For more information, see Oracle Linux Cloud Developer.
 	
-# Install binary by running the following yum command from an Oracle Linux machine
-## Enabling apropiate repositories
+## Install binary by running the following yum command from an Oracle Linux machine
+### Enabling apropiate repositories
 
 * Cosider enable the appropiate repositories:
   - For OL7:
@@ -70,14 +70,19 @@ $terraform -v
 The terraform lab can be performed using any Linux distro as client, or you can use the OCI Cloud Shell, so you'll need
 access to the OCI Console and [Cloud Shell](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) for any reason related with the execution of this lab.
 
-## Clone the repository from Github
+### Clone the repository from Github
 Clone the git project from the client that you are going to perform the lab:
 ```
 $git clone https://github.com/dominusceo/oci-terraform-lab.git
 ```
 
+## Lab OCI-INLAB architecture
+The lab components can be depicted as follow:
+![Image title](img/OCI-INLAB.png){ align=center }
 ## Terraform Variables
 The **tfVariables.sh** script contains default global variables to be defined in Terraform client.
 
-### New subitem
+### New subitem 1
 This is an example documentation with git  [GIT](https://wazuh.com/)
+
+### New subitem 2
