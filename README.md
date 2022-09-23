@@ -43,16 +43,15 @@ sudo yum install terraform-provider-oci
 ```
 terraform -v
 ```
-###OCI Console & Cloud Shell
+### OCI Console & Cloud Shell
 The terraform lab can be performed using any Linux distro as client, or you can use the OCI Cloud Shell, so you'll need
 access to the OCI Console and [Cloud Shell](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) for any reason related with the execution of this lab.
 
-###API keys
-To utilize Stripe, you will need to have access to a pair of
-[Stripe Publishable & Secret keys](https://stripe.com/docs/keys).
+### API keys
+To utilize Stripe, you will need to have access to a pair of [Stripe Publishable & Secret keys](https://stripe.com/docs/keys).
 These are stored in an OCI Vault and then used by the application server upon bootstrapping.
 
-## Clone the repository from Github:
+## Clone the repository from Github
 
 ```
 git clone https://github.com/dominusceo/oci-terraform-lab.git
