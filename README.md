@@ -9,12 +9,12 @@ can check the Oracle Architecture Center [here]().
 On your must have the following points covered in order to perform the OCI-INLAB:
 * You must have a Oracle Cloud Infrastructure (OCI) subscription (Free Account or paid Account), and with the subscription you must have a user account with enough privileges to deploy infrastructure with Terraform.
 * Define API Keys for each user (cloud account assigned) to perform terraform deployments, also it's going to be needed the OCIDs information from:
- ** Tenancy OCID
- ** User OCID
- ** Compartment OCID
- ** Availability Domain name
- ** Region Name
- ** SSH pair key   
+ - Tenancy OCID
+ - User OCID
+ - Compartment OCID
+ - Availability Domain name
+ - Region Name
+ - SSH pair key   
 * The correct Terraform binary file for your operating system. We recommend using Terraform >= 0.12.20 or greater.
 * SSH client
 * Developer repository install and enablement for OL8:
@@ -24,36 +24,36 @@ $sudo dnf -y install oraclelinux-developer-release-el8
 ```
 $sudo yum-config-manager --enable ol8_developer
 ```
-* OCI client [Consider configure previusly oci-cli to corroborate interaction with OCI Cloud)](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
+* OCI client [(Consider configure previusly oci-cli to corroborate interaction with OCI Cloud)](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
 ```
 $sudo dnf install python36-oci-cli
 ```
-* Git (Considering install git)
+* Install git utility
 ```
 $sudo yum install git
 ```
 	
-##Considerations
+## Considerations
 Consider the lab can be performed on cloud shell console, or if you would ike to perform it on Linux client, the following are options:
 
-* Oracle Cloud Development Kit: You can use Resource Manager to preinstall the Oracle Cloud Development Kit on a compute instance in your compartment. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
+* **Oracle Cloud Development Kit**: You can use Resource Manager to preinstall the Oracle Cloud Development Kit on a compute instance in your compartment. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
 
-* Oracle Linux Cloud Developer image: The Terraform provider is pre-installed on the Oracle Linux Cloud Developer platform image. For more information, see Oracle Linux Cloud Developer.
+* **Oracle Linux Cloud Developer image**: The Terraform provider is pre-installed on the Oracle Linux Cloud Developer platform image. For more information, see Oracle Linux Cloud Developer.
 	
-#Install binary by running the following yum command from an Oracle Linux machine
+# Install binary by running the following yum command from an Oracle Linux machine
 ## Enabling apropiate repositories
 
-Enable repositories:
-* For OL7:
+* Cosider enable the appropiate repositories:
+  - For OL7:
 ``` 
 $sudo yum-config-manager --enable ol7_developer
 ```
-* For OL8:
+  - For OL8:
 ```
 $sudo yum-config-manager --enable ol8_developer
 
 ```
-Installing terraform package
+* Installing terraform package:
 ```
 $sudo yum install terraform
 ```
@@ -71,7 +71,7 @@ The terraform lab can be performed using any Linux distro as client, or you can 
 access to the OCI Console and [Cloud Shell](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) for any reason related with the execution of this lab.
 
 ## Clone the repository from Github
-Clone the git projec from the client that you are going to perform the lab:
+Clone the git project from the client that you are going to perform the lab:
 ```
 $git clone https://github.com/dominusceo/oci-terraform-lab.git
 ```
