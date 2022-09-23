@@ -17,6 +17,7 @@ resource "oci_core_subnet" "test_subnet" {
 resource "oci_core_internet_gateway" "test_internet_gateway" {
   compartment_id = var.compartment
   vcn_id         = oci_core_vcn.test_vcn.id
+  display_name   = "ig-${oci_core_vcn.test_vcn.display_name}"
 }
 
 resource "oci_core_route_table" "test_route_table" {

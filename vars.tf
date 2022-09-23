@@ -1,7 +1,7 @@
 variable "compartment" {
   type    = string
   default = "ocid1.compartment.oc1..aaaaaaaa7mw745uen2b3me65exun4vjclyfzduouyaz7fvzd3fjs3ltr54rq"
-  description = "Oracle Cloud Compartment"
+  description = "Oracle Cloud Compute Compartment where the infra will be deployed"
 }
 
 
@@ -38,4 +38,10 @@ variable "ad_list"{
    type        = list
    default     = ["CjTI:US-SANJOSE-1-AD-1"]
    description = "Availability Domain in us-sanjose-1 region"
+}
+
+variable "ad-domain" {
+  type	  = string
+  default = "CjTI:US-SANJOSE-1-AD-1"
+  description = "Availability domain in san jose"
 }

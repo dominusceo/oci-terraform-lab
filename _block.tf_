@@ -19,7 +19,7 @@ resource "oci_core_volume_attachment" "test_volume_attachment" {
     host        = oci_core_instance.test_instance[count.index].public_ip
     user        = "opc"
     timeout     = "3m"
-    private_key = "${file("~/.ssh/tr-private.key")}"
+    private_key = "${file("~/.ssh/tf-private.key")}"
    }
    provisioner "remote-exec" {
      //when       = destroy

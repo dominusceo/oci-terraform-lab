@@ -1,0 +1,37 @@
+# get latest Oracle Linux 7.7 image
+data "oci_core_images" "oraclelinux-7-7" {
+  compartment_id = var.compartment
+  operating_system = "Oracle Linux"
+  operating_system_version = "7.7"
+  filter {
+    name = "display_name"
+    values = ["^([a-zA-z]+)-([a-zA-z]+)-([\\.0-9]+)-([\\.0-9-]+)$"]
+    regex = true
+  }
+}
+
+output "oracle-linux-7-7-latest-name" {
+  value = data.oci_core_images.oraclelinux-7-7.images.0.display_name
+}
+
+output "oracle-linux-7-7-latest-id" {
+  value = data.oci_core_images.oraclelinux-7-7.images.0.id
+}
+
+# get latest Windows Server 2012 R2 Virtual Machine image
+data "oci_core_images" "windows-2012-vm" {
+  compartment_id = var.compartment
+  operating_system = "Windows"
+  filter {
+    name = "display_name"
+    values = ["^Windows-Server-2012-R2-Standard-Edition-VM-Gen2-([\\.0-9-]+)$"]
+    regex  = true
+  }
+}
+output "windows-2012-latest-vm-name" {
+  value = data.oci_core_images.windows-2012-vm.images.0.display_name
+}
+
+output "windows-2012-latest-vm-id" {
+  value = data.oci_core_images.windows-2012-vm.images.0.id
+}
