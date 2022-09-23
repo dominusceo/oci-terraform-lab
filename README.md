@@ -9,12 +9,12 @@ can check the Oracle Architecture Center [here]().
 On your must have the following points covered in order to perform the OCI-INLAB:
 * You must have a Oracle Cloud Infrastructure (OCI) subscription (Free Account or paid Account), and with the subscription you must have a user account with enough privileges to deploy infrastructure with Terraform.
 * Define API Keys for each user (cloud account assigned) to perform terraform deployments, also it's going to be needed the OCIDs information from:
- - Tenancy OCID
- - User OCID
- - Compartment OCID
- - Availability Domain name
- - Region Name
- - SSH pair key   
+  - Tenancy OCID
+  - User OCID
+  - Compartment OCID
+  - Availability Domain name
+  - Region Name
+  - SSH pair key   
 * The correct Terraform binary file for your operating system. We recommend using Terraform >= 0.12.20 or greater.
 * SSH client
 * Developer repository install and enablement for OL8:
