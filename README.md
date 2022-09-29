@@ -32,15 +32,21 @@ $sudo dnf install python36-oci-cli
 $sudo yum install git
 ```
 	
-## Considerations
-Consider the lab can be performed on cloud shell console, or if you would ike to perform it on Linux client, the following are options:
+## Ways to use/install terraform
+Consider the lab can be performed base in 3 different options:
+* **Option 1 - Use terraform from [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**: it is is a web browser-based terminal accessible from the Oracle Cloud Console. 
+* **Option 2 - Install terraform cli and provider enabiling repos.
+* **Option 3 - Cloud Development Kit**: The Terraform provider is pre-installed on the [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
 
-* **Oracle Cloud Development Kit**: You can use Resource Manager to preinstall the Oracle Cloud Development Kit on a compute instance in your compartment. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
+### Option 1: Use terraform with Cloud shell 
+Cloud Shell is free to use (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Cloud Shell is a feature available to all OCI users, accessible from the Console.  
+Cloud Shell provides:
+- An ephemeral machine to use as a host for a Linux shell, pre-configured with the latest version of the OCI Command Line Interface (CLI) and a number of useful tools
+- 5GB of storage for your home directory
+- A persistent frame of the Console which stays active as you navigate to different pages of the console
 
-* **Oracle Linux Cloud Developer image**: The Terraform provider is pre-installed on the Oracle Linux Cloud Developer platform image. For more information, see Oracle Linux Cloud Developer.
-	
-## Install binary by running the following yum command from an Oracle Linux machine
-### Enabling apropiate repositories
+### Option 2: Install terraform and provider enabling apropiate repositories in simpl virtual machine
+If you require install terraform client withih a virtual machine, you should consider the Operating System Version, here provides the enablement for Oracle Linux repositories accordingly with OL version:
 
 * Cosider enable the appropiate repositories:
   - For OL7:
@@ -64,20 +70,19 @@ $sudo yum install terraform-provider-oci
 ```
 $terraform -v
 ```
+## Option 3: Install Oracle Cloud Developer
+Besides you can perform [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image from OCI consol instance subsection, you can use [Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Tasks/devtools.htm) to preinstall the Oracle Cloud Development Kit on a compute instance in your compartment. 
 
-### OCI Console & Cloud Shell
-The terraform lab can be performed using any Linux distro as client, or you can use the OCI Cloud Shell, so you'll need
-access to the OCI Console and [Cloud Shell](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) for any reason related with the execution of this lab.
 
-### Clone the repository from Github
+# Lab OCI-INLAB architecture
+The lab components can be depicted as follow:
+![Image title](img/OCI-INLAB.png)
+
+## Clone the repository from Github
 Clone the git project from the client that you are going to perform the lab:
 ```
 $git clone https://github.com/dominusceo/oci-terraform-lab.git
 ```
-
-## Lab OCI-INLAB architecture
-The lab components can be depicted as follow:
-![Image title](img/OCI-INLAB.png)
 ## Other considerations
 For this lab consider the following points:
 - The **tfVariables.sh** script contains default global variables to be defined or used with Terraform client.
