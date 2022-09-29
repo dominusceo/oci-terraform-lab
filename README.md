@@ -23,7 +23,7 @@ Option to use or install terraform:
 ![Image title](img/option-install.png)
 Consider the lab can be performed base in 3 different options:
 * **Option 1 - Use terraform from [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**: it is a web browser-based terminal accessible from the Oracle Cloud Console. 
-* **Option 2 **- Install terraform cli and provider enabiling repos.
+* **Option 2-**: Install terraform cli and provider enabiling repos.
 * **Option 3 - Cloud Development Kit**: The Terraform provider is pre-installed on the [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
 
 ### Option 1: Use terraform with Cloud shell 
