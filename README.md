@@ -23,7 +23,7 @@ $sudo dnf -y install oraclelinux-developer-release-el8
 ```
 $sudo yum-config-manager --enable ol8_developer
 ```
-* OCI client ([Consider configure previusly oci-cli to corroborate interaction with OCI Cloud])(https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
+* OCI client [Consider configure previusly oci-cli to corroborate interaction with OCI Cloud](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
 ```
 $sudo dnf install python36-oci-cli
 ```
