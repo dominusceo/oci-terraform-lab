@@ -1,5 +1,4 @@
 ---
-
 # Welcome to OCI-INLAB laboratory (Performing Terraform infrastructure demo)
 This repository contains Terraform code to deploy an IaC basic architecture
 if you are looking for more advanced excersises, maybe will be useful you
@@ -78,11 +77,8 @@ $git clone https://github.com/dominusceo/oci-terraform-lab.git
 
 ## Lab OCI-INLAB architecture
 The lab components can be depicted as follow:
-![Image title](img/OCI-INLAB.png){ align=center }
-## Terraform Variables
-The **tfVariables.sh** script contains default global variables to be defined in Terraform client.
-
-### New subitem 1
-This is an example documentation with git  [GIT](https://wazuh.com/)
-
-### New subitem 2
+![Image title](img/OCI-INLAB.png)
+## Other considerations
+For this lab consider the following points:
+- The **tfVariables.sh** script contains default global variables to be defined or used with Terraform client.
+- Take a look to our [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=terraform&cType=reference-architectures&sort=date-desc&lang=en)
