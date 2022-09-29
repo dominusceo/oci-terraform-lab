@@ -2,7 +2,8 @@ resource "oci_core_instance" "test_instance" {
   count               = 2
   availability_domain = var.ad-domain
   compartment_id      = var.compartment
-  shape               = "VM.Standard.E2.1.Micro"
+ #shape               = "VM.Standard.E2.1.Micro"
+  shape               = "VM.Standard2.1"
   display_name        = "server-${count.index + 1}"
 
   source_details {
