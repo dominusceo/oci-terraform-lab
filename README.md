@@ -1,11 +1,10 @@
 ---
-# Welcome to OCI-INLAB laboratory 
-This repository contains Terraform code to deploy an IaC basic architecture
-if you are looking for more advanced excersises, maybe will be useful you
+# Welcome to OCI-INLAB laboratories
+This repository contains Terraform code to deploy an IaC basic architecture divided in 2 labs (lab-01 and lab-02), but if if you are looking for more advanced excersises, maybe will be useful you
 can check the [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=terraform&cType=reference-architectures&sort=date-desc&lang=en).
 
-## Prerequisites to execute terraform to prepare the OCI-INLAB
-On your must have the following points covered in order to perform the OCI-INLAB:
+## Prerequisites to execute terraform to prepare the LAB-01 (OCI-INLAB) and LAB-02 (Resource Manager):
+On your must have the following points covered in order to perform the LAB-01 (OCI-INLAB):
 * You must have a Oracle Cloud Infrastructure (OCI) subscription (Free Account or paid Account), and with the subscription you must have a user account with enough privileges to deploy infrastructure with Terraform.
 * Define [API Keys](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm) for each user (cloud account assigned) to perform terraform deployments, also it's going to be needed the OCIDs information from:
   - Tenancy OCID
@@ -16,8 +15,9 @@ On your must have the following points covered in order to perform the OCI-INLAB
   - Region Name
   - SSH pair key   
 * Consider the terraform binary file for your operating system, for the lab and operative environments ee recommend use terraform >= 0.12.20 or greater.
-* SSH Client accordingly with the [install/use terraform options](#ways-to-use-install-or-install-terraform-client) 
-	
+* SSH Client accordingly [Way to install/use terraform options](#ways-to-use-install-or-install-terraform-client) 
+
+
 ## Ways to use or install terraform client
 Option to use or install terraform:
 
@@ -29,12 +29,12 @@ Consider the lab can be performed base in 3 different options:
 
 ### Option 1: Use terraform with Cloud Shell 
 Cloud Shell is free to use (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Cloud Shell is a feature available to all OCI users:
-- Is Accessible from the Console s:
+- It is accessible from the OCI Console
 - An ephemeral machine to use as a host for a Linux shell, pre-configured with the latest version of the OCI Command Line Interface (CLI) and a number of useful tools
 - 5GB of storage for your home directory
 - A persistent frame of the Console which stays active as you navigate to different pages of the console
 
-You start Cloud shell from your OCI Console.
+You start Cloud Shell from your OCI Console.
  
 ### Option 2: Virtual machine in cloud, 
 For this case the cloud admin should install several componets related with deployment IaS with terraform:
@@ -81,10 +81,11 @@ $terraform -v
 ### Option 3: Install Oracle Cloud Developer
 This third option, you can install [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image from OCI consol instance subsection, or you can use [Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Tasks/devtools.htm) to preinstall this distro within your compartment. 
 
-# Lab OCI-INLAB architecture
+# LAB-01 (OCI-INLAB) architecture
 The lab components can be depicted as follow:
 ![Image title](img/OCI-INLAB.png)
-
+# LAB-02 (OCI Resource Manager)  
+![Image title](img/OCI-INLAB-02.png)
 ## Clone the repository from Github
 Clone the git project from the client that you are going to perform the lab:
 ```
