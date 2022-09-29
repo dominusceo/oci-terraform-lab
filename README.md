@@ -18,12 +18,13 @@ On your must have the following points covered in order to perform the OCI-INLAB
 * SSH client
 	
 ## Ways to use/install terraform
-Consider the lab can be performed base in 3 different options:
-* **Option 1 - Use terraform from [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**: it is is a web browser-based terminal accessible from the Oracle Cloud Console. 
-* **Option 2 - Install terraform cli and provider enabiling repos.
-* **Option 3 - Cloud Development Kit**: The Terraform provider is pre-installed on the [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
+Option to use or install terraform:
 
 ![Image title](img/option-install.png)
+Consider the lab can be performed base in 3 different options:
+* **Option 1 - Use terraform from [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**: it is a web browser-based terminal accessible from the Oracle Cloud Console. 
+* **Option 2 **- Install terraform cli and provider enabiling repos.
+* **Option 3 - Cloud Development Kit**: The Terraform provider is pre-installed on the [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
 
 ### Option 1: Use terraform with Cloud shell 
 Cloud Shell is free to use (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Cloud Shell is a feature available to all OCI users, 
