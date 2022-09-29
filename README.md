@@ -83,7 +83,7 @@ This third option, you can install [Oracle Linux Cloud Developer](https://docs.o
 
 # LAB-01 (OCI-INLAB) architecture
 The lab components can be depicted as follow:
-![Image title](img/OCI-INLAB.png)
+![Image title](img/OCI-INLAB-01.png)
 # LAB-02 (OCI Resource Manager)  
 ![Image title](img/OCI-INLAB-02.png)
 ## Clone the repository from Github
