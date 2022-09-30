@@ -43,6 +43,7 @@ For this case the cloud admin should install several components related with IaS
 ```
 $sudo dnf -y install oraclelinux-developer-release-el8
 ```
+```
 $sudo yum-config-manager --enable ol8_developer
 ```
 * Install OCI client [Consider configure previusly oci-cli to corroborate interaction with OCI Cloud](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
