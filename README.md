@@ -95,3 +95,4 @@ $git clone https://github.com/dominusceo/oci-terraform-lab.git
 For this lab consider the following points:
 - The **tfVariables.sh** script contains default global variables to be defined or used with Terraform client.
 - Take a look to our [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=terraform&cType=reference-architectures&sort=date-desc&lang=en)
+- You can take this PDF document in order to take it as reference as [guide to install Terraform in windows client](choco_install-terraform.pdf)
