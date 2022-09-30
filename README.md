@@ -23,8 +23,8 @@ Option to use or install terraform:
 
 ![Image title](img/option-install.png)
 Consider the lab can be performed base in 3 different options:
-* **Option 1 - Use terraform from [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**: it is a web browser-based terminal accessible from the Oracle Cloud Console. 
-* **Option 2 - Virtual Machin in cloud**: Install terraform cli and components (it, oci-cli, etc.) enabiling repos.
+* **Option 1 - Use terraform with [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**: it is a web browser-based terminal accessible from the Oracle Cloud Console. 
+* **Option 2 - Virtual Machine in cloud**: Install terraform cli and components (it, oci-cli, etc.) enabiling repos.
 * **Option 3 - Cloud Development Kit**: The Terraform provider is pre-installed on the [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
 
 ### Option 1: Use terraform with Cloud Shell 
@@ -36,22 +36,12 @@ Cloud Shell is free to use (within monthly tenancy limits), and provides access 
 
 You start Cloud Shell from your OCI Console.
  
-### Option 2: Virtual machine in cloud, 
-For this case the cloud admin should install several componets related with deployment IaS with terraform:
+### Option 2: Virtual machine in cloud
+For this case the cloud admin should install several components related with IaS deployment with terraform:
 
-* Install developer repository:
+* Install developer repository based in the latest image platform version available (not OL9):
 ```
 $sudo dnf -y install oraclelinux-developer-release-el8
-```
-
-* Enable repositories accordingly with the Operating System:
-  - For OL7:
-
-```
-$sudo yum-config-manager --enable ol7_developer
-
-```
-  - For OL8:
 ```
 $sudo yum-config-manager --enable ol8_developer
 ```
@@ -81,12 +71,14 @@ $terraform -v
 ### Option 3: Install Oracle Cloud Developer
 This third option, you can install [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image from OCI consol instance subsection, or you can use [Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Tasks/devtools.htm) to preinstall this distro within your compartment. 
 
-# LAB-01 (OCI-INLAB) architecture
-The lab components can be depicted as follow:
+# [LAB-01 (OCI-INLAB) Basic deployment architecture](https://github.com/dominusceo/oci-terraform-lab/tree/main/lab-01)
+For the LAB-01 the components can be depicted as follow:
 ![Image title](img/OCI-INLAB-01.png)
-# LAB-02 (OCI Resource Manager)  
+# [LAB-02 Basic Deployment with OCI Resource Manager](https://github.com/dominusceo/oci-terraform-lab/tree/main/lab-02)
+For the LAB-02 the components can be depicted as follow:
 ![Image title](img/OCI-INLAB-02.png)
-## Clone the repository from Github
+
+## Let's get started, clone the repository from Github
 Clone the git project from the client that you are going to perform the lab:
 ```
 $git clone https://github.com/dominusceo/oci-terraform-lab.git

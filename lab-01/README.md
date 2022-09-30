@@ -1,5 +1,5 @@
 ---
-# LAB-01 - OCI-INLAB laboratory - 
+# LAB-01 - OCI-INLAB laboratory
 For this lab, you can take the following architecture as reference, also you should consider 
 can check the [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=terraform&cType=reference-architectures&sort=date-desc&lang=en) for more advanced examples of architectures to use through terraform.
 
@@ -26,7 +26,7 @@ Elements to create:
 - Pto. TCP 8080 (Ejemplo proxy Web – NO IMPLEMENTADO)
 - Pto. TCP 3620 (Conectividad iSCSI)
 
-2. Una regla de egreso general para la salida
+2. Crear una regla de egreso general para la salida
 - Segmento 0.0.0.0/0 (Todo internet) 
 ![OCI-INLAB-C](../img/OCI-INLAB-C.png)
 
