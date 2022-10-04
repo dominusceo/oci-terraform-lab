@@ -1,5 +1,5 @@
-#Author : Ricardo Carrillo
-# Main file describe the provider configuration, this file uses vars.tf file in order to get values defined to connect to oci
+#Author : Ricardo Carrillo ricardo.d.carrillo@oracle.com
+#Goal   : Main file describe the provider configuration, this file uses vars.tf file in order to get values defined to connect to oci
 /*
 provider "oci" {
   #version = ">= 3.27.0"
