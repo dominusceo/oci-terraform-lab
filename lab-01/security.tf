@@ -9,7 +9,7 @@ resource "oci_core_security_list" "test_security_list" {
     protocol    = "all"
   }
 
-// Commented for lab 3
+// Commented for lab #3
 
   ingress_security_rules {
     protocol = "6"

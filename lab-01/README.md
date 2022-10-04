@@ -14,23 +14,23 @@ Elements to create:
 
 ![OCI-INLAB-A](../img/inlab-01/OCI-INLAB-A.png)
 
-## LAB-01 #2 - Creación de Instancias
-1. Creación de 2 instancias 
-2. Cada instancia tiene un nombre diferente. Ex: server-1 y server-2
+## LAB-01 #2 - Instance creation
+1. 2 instances creation
+2. Each instance has a different name, Ex: **server-1** y **server-2**
 
 ![OCI-INLAB-B](../img/inlab-01/OCI-INLAB-B.png)
 
-## LAB-01 #3 - Crear Security Lists
-1. Crear tres reglas de ingreso en la lista de Seguridad
-- Pto. TCP 22 (Acceso SSH)
-- Pto. TCP 8080 (Ejemplo proxy Web – NO IMPLEMENTADO)
-- Pto. TCP 3620 (Conectividad iSCSI)
+## LAB-01 #3 - Security Lists creation
+1. Create 3 ingress rules within the security list recently created: 
+- TCP 22 port, TCP protocol (SSH Access)
+- TCP 8080 port, TCP protocol (Proxy Web – **NOT DEPLOYED**)
+- TCP 3620 port, TCP protocol (iSCSI connectivity)
 
-2. Crear una regla de egreso general para la salida
-- Segmento 0.0.0.0/0 (Todo internet) 
+2.  Egress rule creation 
+- 0.0.0.0/0 segment (All internet) 
 ![OCI-INLAB-C](../img/inlab-01/OCI-INLAB-C.png)
 
 ## LAB-01 #4 - Adjuntar Block Volume
-Adjuntar los 2 block volumes a las 2 instancias mediante protocolo iSCSI.
+Attach 2 block volumes to both instances through iSCSI protocol.
 
 ![OCI-INLAB-D](../img/inlab-01/OCI-INLAB-D.png)
