@@ -13,7 +13,7 @@ Elements to create:
    - TCP 22 port, TCP protocol (SSH Access)
    - TCP 8080 port, TCP protocol (Proxy Web – **NOT DEPLOYED**)
    - TCP 3620 port, TCP protocol (iSCSI connectivity)
-8.  Egress rule creation
+8. Egress rule creation
    - 0.0.0.0/0 segment (All internet)
 9. Attach 2 block volumes to both instances through iSCSI protocol.
 
