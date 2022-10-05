@@ -12,6 +12,12 @@ Elements to create:
 3. Internet Gateway creation and route table associated
 4. Link the routable created with the subnet created
 
+To perform the above steps, open a terminal accordingly with your installation terraform client an execute:
+```
+cd $HOME/oci-terraform-lab/lab-01
+$terraform init
+```
+
 ![OCI-INLAB-A](../img/inlab-01/OCI-INLAB-A.png)
 
 ## LAB-01 #2 - Instance creation

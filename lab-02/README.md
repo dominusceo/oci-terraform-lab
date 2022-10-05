@@ -1,8 +1,15 @@
 ---
 # LAB-02 - OCI-INLAB laboratory
-For this you should consider delete ```$terraform destroy``` **LAB-01**. 
+For this you should consider delete in LAB-01. 
+```bash 
+$terraform destroy
+```
+## Architecture LAB-02
+The following is a diagram reference from the lab:
+![OCI-INLAB-A](../img/OCI-INLAB-02.png)
 
-Elements to create:
+## Elements to create:
+This lab, will be perform the following objects creation:
 1. Create VCN 
 2. Create subnet
 3. Internet Gateway creation and route table associated
@@ -17,4 +24,8 @@ Elements to create:
    - 0.0.0.0/0 segment (All internet)
 9. Attach 2 block volumes to both instances through iSCSI protocol.
 
-![OCI-INLAB-A](../img/OCI-INLAB-02.png)
+
+```bash 
+$cd $HOME/oci-terraform-lab/lab-02
+$terraform init && terraform apply -auto-approve
+```

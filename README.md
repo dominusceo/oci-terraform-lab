@@ -37,31 +37,38 @@ Cloud Shell is free to use (within monthly tenancy limits), and provides access 
 
 You can start Cloud Shell from your OCI Console.
  
-### Option 2: Virtual machine in cloud
+### Option 2: Cloud Development Kit
+This second option, you can install [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image from OCI consol instance subsection, or you can use [Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Tasks/devtools.htm) to preinstall this distro within your compartment. 
+
+
+### Option 3: Local Machine as Client 
 For this case, the cloud admin should install several components related with IaS deployment with terraform:
 
-* Install and enable developer repository based in the latest image platform version available (not OL8):
+* Install the Operating System based on platform images
+
+* If you consider install Oracle Linux, you can perform the installation and the enablement of the repositories required. Considering is a Linux OL8 or RHEL 8:
+- For Oracle Linux 8 
 ```
 $sudo dnf -y install oraclelinux-developer-release-el8
 $sudo yum-config-manager --enable ol8_developer
 ```
+- For RHEL 8 download RPM from YUM oracle repositories directly:
+```
+wget -c https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/oraclelinux-developer-release-el8-1.0-7.el8.src.rpm
+```
 
-* Install OCI client [Consider configure previusly oci-cli to corroborate interaction with OCI Cloud](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm):
+* Also it's not mandatory but convenient to install OCI client (OCI-CLI) [Consider configure previusly oci-cli to corroborate interaction with OCI Cloud](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm):
 ```
 $sudo dnf install python36-oci-cli
 ```
 
-* Install git utility to manage code projects:
+* Alternativly, get git utility to manage code projects and perform the lab cloning:
 ```
 $sudo yum install git
 ```
-* Install terraform client:
+* If it was downloaded and enable the Developer Repository, you can install the terraform client and terraform provider performing by:
 ```
 $sudo yum install terraform
-```
-
-* Install terraform provider:
-```
 $sudo yum install terraform-provider-oci
 ```
 * Test terraform installation opening a terminal window and run the following command to test your installation:
@@ -69,12 +76,8 @@ $sudo yum install terraform-provider-oci
 $terraform -v
 ```
 
-### Option 3: Install Oracle Cloud Developer
-This third option, you can install [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image from OCI consol instance subsection, or you can use [Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Tasks/devtools.htm) to preinstall this distro within your compartment. 
-
-
 # Other considerations
-For this lab consider the following points:
+For this labs consider the following observations:
 - The **tfVariables.sh** script contains default global variables to be defined or used with Terraform client.
 - Take a look to our [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=terraform&cType=reference-architectures&sort=date-desc&lang=en)
 - You can take this PDF document in order to take it as reference or [guide to install Terraform in windows client](choco_install-terraform.pdf)
