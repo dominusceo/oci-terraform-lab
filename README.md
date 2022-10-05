@@ -25,8 +25,8 @@ Option to use or install terraform:
 ![Image title](img/option-install.png)
 Consider the lab can be performed base in 3 different options:
 * **Option 1 - Use terraform with [Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**: it is a web browser-based terminal accessible from the Oracle Cloud Console. 
-* **Option 2 - Virtual Machine in cloud**: Install terraform cli and components (it, oci-cli, etc.) enabling repos.
-* **Option 3 - Cloud Development Kit**: The Terraform provider is pre-installed on the [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
+* **Option 2 - Cloud Development Kit**: The Terraform provider is pre-installed on the [Oracle Linux Cloud Developer](https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm) platform image. The Oracle Cloud Development Kit includes Terraform and the OCI Terraform provider, and preconfigures the required authorization.
+* **Option 3 - Virtual Machine in cloud**: Install terraform cli and components (it, oci-cli, etc.) enabling repos.
 
 ### Option 1: Use terraform with Cloud Shell 
 Cloud Shell is free to use (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Cloud Shell is a feature available to all OCI users:
@@ -78,7 +78,8 @@ For this lab consider the following points:
 - The **tfVariables.sh** script contains default global variables to be defined or used with Terraform client.
 - Take a look to our [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=terraform&cType=reference-architectures&sort=date-desc&lang=en)
 - You can take this PDF document in order to take it as reference or [guide to install Terraform in windows client](choco_install-terraform.pdf)
-- You can take this URL reference to [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) and use a native Oracle Linux container natively in your Windows or [Download alternative PDF](wsl-windows-installation.pdf).
+- You can take this URL reference to [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) and use a native Oracle Linux container natively in your Windows machine or if you prefer you can [Download alternative PDF](wsl-windows-installation.pdf) in order to perform the installation of WSL.
+
 # OCI LAB-01 & LAB-02
 ## LAB-01 (OCI-INLAB) Basic deployment architecture
 For the **LAB-01** the components can be depicted as follow:
