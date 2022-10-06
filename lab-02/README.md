@@ -53,47 +53,50 @@ $zip -r ~/Downloads/lab-02-rm.zip lab-02/
   adding: lab-02/network.tf (deflated 75%)
 $
 ```
-2. Once created the zip file, log-in in your OCI Console and go to hamburguer menu > Developer Services > Resource Manager:
-![in-lab-02OCI-LAB-02-RM-01](../img/in-lab-02/OCI-LAB-02-RM-01.png)
+2. Once created the zip file, log-in in your OCI Console and go to **hamburguer menu > Developer Services > Resource Manager**:
+![inlab-02OCI-LAB-02-RM-01](../img/inlab-02/OCI-LAB-02-RM-01.png)
 - Create an stack:
-![in-lab-02OCI-LAB-02-RM-03](../img/in-lab-02/OCI-LAB-02-RM-03.png)
+![inlab-02OCI-LAB-02-RM-03](../img/inlab-02/OCI-LAB-02-RM-03.png)
+
 - Select My configuration and **Zip file** option:
-![in-lab-02OCI-LAB-02-RM-04](../img/in-lab-02/OCI-LAB-02-RM-04.png)
-![in-lab-02OCI-LAB-02-RM-05](../img/in-lab-02/OCI-LAB-02-RM-05.png)
-- Once you have selected Zip file options, clic on browse and select the file lab-02.zip and see the result:
-![in-lab-02OCI-LAB-02-RM-06](../img/in-lab-02/OCI-LAB-02-RM-06.png)
+![inlab-02OCI-LAB-02-RM-04](../img/inlab-02/OCI-LAB-02-RM-04.png)
+![inlab-02OCI-LAB-02-RM-05](../img/inlab-02/OCI-LAB-02-RM-05.png)
+- Once you have selected Zip file options, clic on browse and select the file **lab-02.zip** and see the result:
+![inlab-02OCI-LAB-02-RM-06](../img/inlab-02/OCI-LAB-02-RM-06.png)
 - Keep Custom providers as default, and set the following inputs in each field:
    - Name: lab-02-rm
    - Description: Terraform lab-02-rm
    - Terraform version: 0.13.x
 
-![in-lab-02OCI-LAB-02-RM-07](../img/in-lab-02/OCI-LAB-02-RM-07.png)
+![inlab-02OCI-LAB-02-RM-07](../img/inlab-02/OCI-LAB-02-RM-07.png)
 
-- Clic on Next button.
+- Clic on Next button
+
 3. You will see automatically is loaded info related with the file **vars.tf** and clic on Next button:
-![in-lab-02OCI-LAB-02-RM-08](../img/in-lab-02/OCI-LAB-02-RM-08.png)
+![inlab-02OCI-LAB-02-RM-08](../img/inlab-02/OCI-LAB-02-RM-08.png)
 
 4. In Review phase, just clic create button:
-![in-lab-02OCI-LAB-02-RM-09](../img/in-lab-02/OCI-LAB-02-RM-09.png)
+![inlab-02OCI-LAB-02-RM-09](../img/inlab-02/OCI-LAB-02-RM-09.png)
 
 5. The Stack **lab-02-rm** has been created we proceed to create a plan:
-![in-lab-02OCI-LAB-02-RM-10](../img/in-lab-02/OCI-LAB-02-RM-10.png)
+![inlab-02OCI-LAB-02-RM-10](../img/inlab-02/OCI-LAB-02-RM-10.png)
 
 - Clic in plan button, and provide the name **plan-job-lab-02-rm** within the text field and clic **Plan** button:
 
-![in-lab-02OCI-LAB-02-RM-11](../img/in-lab-02/OCI-LAB-02-RM-11.png)
-![in-lab-02OCI-LAB-02-RM-12](../img/in-lab-02/OCI-LAB-02-RM-12.png)
+![inlab-02OCI-LAB-02-RM-11](../img/inlab-02/OCI-LAB-02-RM-11.png)
+![inlab-02OCI-LAB-02-RM-12](../img/inlab-02/OCI-LAB-02-RM-12.png)
 - We can see the **Plan** has been executed successfully:
-![in-lab-02OCI-LAB-02-RM-13](../img/in-lab-02/OCI-LAB-02-RM-13.png)
+![inlab-02OCI-LAB-02-RM-13](../img/inlab-02/OCI-LAB-02-RM-13.png)
 
 6. We go to Stack details, clic on **Apply** button, and set the following info:
 - Name: apply-job-02-rm
 - Apply job plan resolution: **select default plan job listed**
 - Once, we clic on blue **Apply** button
-![in-lab-02OCI-LAB-02-RM-14](../img/in-lab-02/OCI-LAB-02-RM-14.png)
-![in-lab-02OCI-LAB-02-RM-15](../img/in-lab-02/OCI-LAB-02-RM-15.png)
+![inlab-02OCI-LAB-02-RM-14](../img/inlab-02/OCI-LAB-02-RM-14.png)
+![inlab-02OCI-LAB-02-RM-15](../img/inlab-02/OCI-LAB-02-RM-15.png)
 
-7. Once peformed the plan, we can see the progress:
+7. Once peformed the plan, we can see the progress and the success:
 
-![in-lab-02/OCI-LAB-02-RM-16](../img/in-lab-02/OCI-LAB-02-RM-16.png)
+![inlab-02/OCI-LAB-02-RM-16](../img/inlab-02/OCI-LAB-02-RM-16.png)
+![inlab-02/OCI-LAB-02-RM-16](../img/inlab-02/OCI-LAB-02-RM-17.png)
 
