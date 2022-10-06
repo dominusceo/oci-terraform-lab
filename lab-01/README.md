@@ -100,16 +100,16 @@ cardo.carrillo@RDCARRIL-7410 lab-01]$ cat -n   security.tf
     40  */
     41  }
 ```
-Save the security.tf file and perform terraform execution plan:
+Save the **security.tf** file and perform terraform execution plan:
 ```bash
 cd $HOME/oci-terraform-lab/lab-01
 $terraform apply
 ```
 Once you have made these moditications, you will see somethin such as:
 
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04A.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04B.png)
+![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03.png)
+![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03A.png)
+![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03B.png)
 
 ## LAB-01 #4 - Adjuntar Block Volume
 Attach 2 block volumes to both instances through iSCSI protocol.
@@ -123,6 +123,6 @@ $terraform apply
 ```
 Once performed the terraform apply, you can see something such as:
 
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03A.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03B.png)
+![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04.png)
+![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04A.png)
+![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04B.png)

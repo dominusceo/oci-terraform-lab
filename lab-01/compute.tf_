@@ -8,6 +8,9 @@ resource "oci_core_instance" "test_instance" {
 
   source_details {
     //All images: https://docs.oracle.com/en-us/iaas/images/image/4d8a588e-bb9d-428d-af29-245ec57aa41a/
+    # Add image from - us-ashburn-1
+    #source_id   = "ocid1.image.oc1.iad.aaaaaaaakv7vhpdllpbotmmjvxus3j5nh6wt2n43ddcg3cl5fnq5p6kngkza"
+    # Add image from - is-sanjose-1
     source_id   = "ocid1.image.oc1.us-sanjose-1.aaaaaaaa3stdbyfdqhcdykpzf7ndzwudklnp77wo5lym7rp33ysspk6o2m4q"
     source_type = "image"
   }
