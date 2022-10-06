@@ -1,5 +1,4 @@
 ---
-# LAB-02 - OCI-INLAB laboratory
 # LAB-03 - Oracle Cloud Infrastructure Ansible Collection
 
 Oracle Cloud Infrastructure Ansible Collection provides an easy way to provision and manage resources in Oracle Cloud using Ansible.
