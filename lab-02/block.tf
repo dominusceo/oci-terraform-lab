@@ -4,7 +4,7 @@ resource "oci_core_volume" "test_volume" {
   size_in_gbs         = 50
   #display_name        = "bv_oci_lab"
   display_name        = "bv_oci_lab-${format("%01d", count.index + 1)}"
-  availability_domain = "CjTI:US-SANJOSE-1-AD-1"
+  availability_domain = var.ad-domain
 }
 
 resource "oci_core_volume_attachment" "test_volume_attachment" {

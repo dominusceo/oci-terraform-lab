@@ -1,19 +1,19 @@
 variable "compartment" {
   type    = string
-  default = "ocid1.compartment.oc1..aaaaaaaa7mw745uen2b3me65exun4vjclyfzduouyaz7fvzd3fjs3ltr54rq"
+  default = "ocid1.compartment.oc1..aaaaaaaanoui6jllobc2iubjyno2vvvv7flg4rsu37avw532zzygizgche7q"
   description = "Oracle Cloud Compute Compartment where the infra will be deployed"
 }
 
 
 variable "tenancy_ocid" {
   type    = string
-  default = "ocid1.tenancy.oc1..aaaaaaaa2rk54ibdfxxemyrgkfsna3mzj5s2kihdoyz4riglujpsxymghrgq"
+  default = "ocid1.tenancy.oc1..aaaaaaaar6q6nrtbkidcz6xnyl3lkqssk7c6nslpnu2mdjywtbppvz5txz2a"
   description = "Oracle Cloud Identifier tenancy"
 }
 
 variable "user_ocid" {
   type    = string
-  default = "ocid1.user.oc1..aaaaaaaad5wkqrqw25rtgvltdblv5yhnvxg3c3ugzvurm6bp63yvppnbgx5q"
+  default = "ocid1.compartment.oc1..aaaaaaaanoui6jllobc2iubjyno2vvvv7flg4rsu37avw532zzygizgche7q"
   description = "Oracle Cloud Identifier user"
 }
 
@@ -36,7 +36,7 @@ variable "oci_region" {
 
 variable "ad_list"{
    type        = list
-   default     = ["CjTI:US-SANJOSE-1-AD-1"]
+   default     = ["HRGE:US-SANJOSE-1-AD-1"]
    description = "Availability Domain in us-sanjose-1 region"
 }
 
@@ -47,7 +47,7 @@ variable "instance_shape" {
 
 variable "ad-domain" {
   type	  = string
-  default = "CjTI:US-SANJOSE-1-AD-1"
+  default = "HRGE:US-SANJOSE-1-AD-1"
   description = "Availability domain in san jose"
 }
 

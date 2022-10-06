@@ -57,7 +57,6 @@ Please, validate within the OCI console.
 
 Edit the file from  **security.tf file** and remove comments marks from line 6 and 40:
 ```bash
-cardo.carrillo@RDCARRIL-7410 lab-01]$ cat -n   security.tf
      1  resource "oci_core_security_list" "test_security_list" {
      2    compartment_id = var.compartment
      3    vcn_id         = oci_core_vcn.test_vcn.id
@@ -107,9 +106,9 @@ $terraform apply
 ```
 Once you have made these moditications, you will see somethin such as:
 
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03A.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY03B.png)
+![OCI-LAB-01-APPLY03](../img/inlab-01/OCI-LAB-01-APPLY03.png)
+![OCI-LAB-01-APPLY03A](../img/inlab-01/OCI-LAB-01-APPLY03A.png)
+![OCI-LAB-01-APPLY03B](../img/inlab-01/OCI-LAB-01-APPLY03B.png)
 
 ## LAB-01 #4 - Adjuntar Block Volume
 Attach 2 block volumes to both instances through iSCSI protocol.
@@ -123,6 +122,16 @@ $terraform apply
 ```
 Once performed the terraform apply, you can see something such as:
 
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04A.png)
-![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY04B.png)
+![OCI-LAB-01-APPLY04](../img/inlab-01/OCI-LAB-01-APPLY04.png)
+![OCI-LAB-01-APPLY04A](../img/inlab-01/OCI-LAB-01-APPLY04A.png)
+![OCI-LAB-01-APPLY04B](../img/inlab-01/OCI-LAB-01-APPLY04B.png)
+
+# Reseting LAB-01 
+In order to perform a 'clean up' to this LAB, please perform the following execution:
+```bash
+$terraform destroy -auto-approve
+```
+Once terraform has performed destroy operation, you should see something like this:
+
+![OCI-LAB-01-DESTROY](../img/inlab-01/OCI-LAB-01-DESTROY.png)
+

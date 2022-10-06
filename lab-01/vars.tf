@@ -36,7 +36,7 @@ variable "oci_region" {
 
 variable "ad_list" {
   type        = list(any)
-  default     = ["CjTI:US-SANJOSE-1-AD-1"]
+  default     = ["HRGE:US-SANJOSE-1-AD-1"]
   description = "Availability Domain in us-sanjose-1 region"
 }
 
