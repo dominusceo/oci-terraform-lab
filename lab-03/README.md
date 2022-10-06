@@ -30,34 +30,34 @@ Also, the new modules are renamed to use the service name as a prefix.
 We support almost all the of [OCI Cloud services](https://docs.cloud.oracle.com/en-us/iaas/Content/services.htm) with very few exceptions.
 For the complete list of supported services, please check the [modules list](https://oci-ansible-collection.readthedocs.io/en/latest/collections/oracle/oci/index.html).
 
-## Installation
 
-### Pre-requisites for Using Ansible with Oracle Cloud Infrastructure
+## Pre-requisites for Using Ansible with Oracle Cloud Infrastructure
 
 - You must have an Oracle Cloud Infrastructure account.
 - You must have a user in that account in a security group with a policy that grants necessary permissions for working with resources in the account compartments.
 - You must have the necessary credentials and OCID information.
+- Install **python>=3.6**
 
-
-**python>=3.6**
+### Installation
 #### Oracle Linux 7
-
-```
+```bash
 sudo yum-config-manager --enable ol7_developer
+sudo yum install -y oracle-epel-release-el7
 sudo yum-config-manager --enable ol7_developer_EPEL
-sudo yum install oci-ansible-collection
+sudo yum install -y oci-ansible-collection
 ```
 #### Oracle Linux 8
 
-```
+```bash
 sudo yum-config-manager --enable ol8_developer
+sudo yum install -y oracle-epel-release-el8
 sudo yum-config-manager --enable ol8_developer_EPEL
-sudo yum install oci-ansible-collection
+sudo yum install -y oci-ansible-collection
 ```
 
 #### Linux/macOS
 
-```
+```bash
 curl -L https://raw.githubusercontent.com/oracle/oci-ansible-collection/master/scripts/install.sh | bash -s -- --verbose
 ```
 #### For more info about installation and troubleshooting check the [Installation Guide](https://github.com/oracle/oci-ansible-collections/blob/master/InstallationGuide.md).
@@ -65,12 +65,12 @@ curl -L https://raw.githubusercontent.com/oracle/oci-ansible-collection/master/s
 
 To test the installation of the RPM and configuration of the SDK, you can run a sample Ansible playbook.
 
-### Oracle Linux 7
+#### Oracle Linux 7
 If you're using Oracle Linux 7, use the following command to test your installation:
 ```
 ansible-3 localhost -m oracle.oci.oci_object_storage_namespace_facts
 ```
-### Oracle Linux 8
+#### Oracle Linux 8
 If you're using Oracle Linux 8, use the following command to test your installation:
 ```
 ansible localhost -m oracle.oci.oci_object_storage_namespace_facts
