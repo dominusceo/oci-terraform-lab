@@ -28,15 +28,19 @@ In this step you will create:
 1. 2 instances, considering each instance has a different name (Ex: **server-1** y **server-2**)
 ![OCI-INLAB-B](../img/inlab-01/OCI-INLAB-B.png)
 
-Rename the file from  ```bash compute.tf file```  to ```bash compute.tf``` and perform apply operation again with terraform client:
+Rename the file from  **compute.tf** file  to **compute.tf** and perform apply operation again with terraform client:
 ```bash
 cd $HOME/oci-terraform-lab/lab-01
 $mv compute.tf_ compute.tf 
 $terraform apply
 ```
+
 Once you approve the plan, you will see something similar to the following output:
+
 ![OCI-LAB-01-APPLY02](../img/inlab-01/OCI-LAB-01-APPLY02.png)
+
 Please, validate within the OCI console.
+
 ![OCI-LAB-01-APPLY02A](../img/inlab-01/OCI-LAB-01-APPLY02A.png)
 ![OCI-LAB-01-APPLY02B](../img/inlab-01/OCI-LAB-01-APPLY02B.png)
 ![OCI-LAB-01-APPLY02C](../img/inlab-01/OCI-LAB-01-APPLY02C.png)
@@ -51,7 +55,7 @@ Please, validate within the OCI console.
 - 0.0.0.0/0 segment (All internet) 
 ![OCI-INLAB-C](../img/inlab-01/OCI-INLAB-C.png)
 
-Edit the file from  ```bash security.tf file``` and remove comments marks from line 6 and 40:
+Edit the file from  **security.tf file** and remove comments marks from line 6 and 40:
 ```bash
 cardo.carrillo@RDCARRIL-7410 lab-01]$ cat -n   security.tf
      1  resource "oci_core_security_list" "test_security_list" {
@@ -111,7 +115,7 @@ Once you have made these moditications, you will see somethin such as:
 Attach 2 block volumes to both instances through iSCSI protocol.
 ![OCI-INLAB-D](../img/inlab-01/OCI-INLAB-D.png)
 
-Rename the file from  ```bash block.tf_ file```  to ```bash block.tf``` and perform apply operation again with terraform client:
+Rename the file from  **bash block.tf_** file  to **block.tf** and perform apply operation again with terraform client:
 ```bash
 cd $HOME/oci-terraform-lab/lab-01
 $mv block_.tf_ block.tf
