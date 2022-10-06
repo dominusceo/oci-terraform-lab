@@ -28,7 +28,7 @@ resource "oci_load_balancer" "lb1" {
   compartment_id = var.compartment
   subnet_ids = [
     oci_core_subnet.priv_subnet1.id,
-   #oci_core_subnet.priv_subnet2.id,
+    #oci_core_subnet.priv_subnet2.id,
   ]
 
   display_name = "lb1-${oci_core_vcn.test_vcn.display_name}"
@@ -50,12 +50,18 @@ resource "oci_load_balancer_backend_set" "lb-bkset1" {
 
   health_checker {
     port                = "443"
-    protocol            = "HTTP"
+    protocol            = "TCP"
     response_body_regex = ".*"
     url_path            = "/"
-    retries             = 3
+    retries             =  3
     interval_ms         = 3000
     timeout_in_millis   = 1000
+  }
+  ssl_configuration {
+    #Optional
+    certificate_name = oci_load_balancer_certificate.test_certificate.certificate_name
+    #verify_depth            = 3
+    verify_peer_certificate = false
   }
 }
 
@@ -80,14 +86,14 @@ resource "oci_load_balancer_path_route_set" "test_path_route_set" {
 resource "oci_load_balancer_hostname" "test_hostname1" {
   #Required
   hostname         = "${oci_core_instance.test_instance[0].display_name}.example.com"
-  name             = "${oci_core_instance.test_instance[0].display_name}"
+  name             = oci_core_instance.test_instance[0].display_name
   load_balancer_id = oci_load_balancer.lb1.id
 }
 
 resource "oci_load_balancer_hostname" "test_hostname2" {
   #Required
   hostname         = "${oci_core_instance.test_instance[1].display_name}.example.com"
-  name             = "${oci_core_instance.test_instance[1].display_name}"
+  name             = oci_core_instance.test_instance[1].display_name
   load_balancer_id = oci_load_balancer.lb1.id
 }
 
@@ -101,15 +107,15 @@ resource "oci_load_balancer_listener" "lb-listener1" {
   rule_set_names           = [oci_load_balancer_rule_set.test_rule_set.name]
   connection_configuration {
     idle_timeout_in_seconds = "2"
-    
+
   }
   ssl_configuration {
     #Optional
-      certificate_name = oci_load_balancer_certificate.test_certificate.certificate_name
-      verify_depth        = 3
-      verify_peer_certificate = true
-      protocols =  ["TLSv1.1", "TLSv1.2"]
-    }
+    certificate_name        = oci_load_balancer_certificate.test_certificate.certificate_name
+    #verify_depth            = 3
+    verify_peer_certificate = false
+    protocols               = ["TLSv1.1", "TLSv1.2"]
+  }
 }
 
 resource "oci_load_balancer_backend" "lb-backend1" {
@@ -131,7 +137,7 @@ resource "oci_load_balancer_rule_set" "test_rule_set" {
     allowed_methods = ["GET", "POST"]
     status_code     = "405"
   }
-  
+
   items {
     action = "REDIRECT"
 
@@ -158,8 +164,8 @@ resource "oci_load_balancer_rule_set" "test_rule_set" {
   }
 
   load_balancer_id = oci_load_balancer.lb1.id
- # name             = "${oci_vcn_name.test_vcn.display_name}_rule_set_name"
-  name             = "example_rule_set_name"
+  # name             = "${oci_vcn_name.test_vcn.display_name}_rule_set_name"
+  name = "example_rule_set_name"
 }
 
 resource "oci_load_balancer_certificate" "test_certificate" {
@@ -168,10 +174,10 @@ resource "oci_load_balancer_certificate" "test_certificate" {
   load_balancer_id = oci_load_balancer.lb1.id
 
   #Optional
-  ca_certificate  = file("./certificates/ca.crt")
-  passphrase          = null
-  private_key         = file("./certificates/loadbalancer.key")
-  public_certificate  = file("./certificates/loadbalancer.crt")
+  ca_certificate     = file("./certificates/ca.crt")
+  passphrase         = null
+  private_key        = file("./certificates/loadbalancer.key")
+  public_certificate = file("./certificates/loadbalancer.crt")
   lifecycle {
     create_before_destroy = true
   }
@@ -182,5 +188,5 @@ data "oci_load_balancer_ssl_cipher_suites" "test_ssl_cipher_suites" {
   load_balancer_id = oci_load_balancer.lb1.id
 }
 output "lb_public_ip-and_nodes" {
-  value = [oci_load_balancer.lb1.ip_address_details,oci_core_instance.test_instance[0].private_ip,oci_core_instance.test_instance[1].private_ip]
+  value = [oci_load_balancer.lb1.ip_address_details, oci_core_instance.test_instance[0].private_ip, oci_core_instance.test_instance[1].private_ip]
 }

@@ -1,25 +1,25 @@
 variable "compartment" {
-  type    = string
-  default = "ocid1.compartment.oc1..aaaaaaaanoui6jllobc2iubjyno2vvvv7flg4rsu37avw532zzygizgche7q"
+  type        = string
+  default     = "ocid1.compartment.oc1..aaaaaaaanoui6jllobc2iubjyno2vvvv7flg4rsu37avw532zzygizgche7q"
   description = "Oracle Cloud Compute Compartment where the infra will be deployed"
 }
 
 
 variable "tenancy_ocid" {
-  type    = string
-  default = "ocid1.tenancy.oc1..aaaaaaaar6q6nrtbkidcz6xnyl3lkqssk7c6nslpnu2mdjywtbppvz5txz2a"
+  type        = string
+  default     = "ocid1.tenancy.oc1..aaaaaaaar6q6nrtbkidcz6xnyl3lkqssk7c6nslpnu2mdjywtbppvz5txz2a"
   description = "Oracle Cloud Identifier tenancy"
 }
 
 variable "user_ocid" {
-  type    = string
-  default = "ocid1.compartment.oc1..aaaaaaaanoui6jllobc2iubjyno2vvvv7flg4rsu37avw532zzygizgche7q"
+  type        = string
+  default     = "ocid1.user.oc1..aaaaaaaavhq2vh6b2fh2yim2jmh6bjb3kkd2x7prhhfkz7swomle644azkcq"
   description = "Oracle Cloud Identifier user"
 }
 
 variable "fingerprint" {
-  type    = string
-  default = "3e:48:9e:44:b4:23:3c:41:8e:94:03:d5:4a:83:73:5b"
+  type        = string
+  default     = "3e:48:9e:44:b4:23:3c:41:8e:94:03:d5:4a:83:73:5b"
   description = "Oracle Cloud Fingerprint for the key pair"
 }
 
@@ -29,15 +29,15 @@ variable "private_key" {
 }
 
 variable "oci_region" {
-  type = string
+  type        = string
   default     = "us-sanjose-1"
   description = "Oracle Cloud region"
 }
 
-variable "ad_list"{
-   type        = list
-   default     = ["HRGE:US-SANJOSE-1-AD-1"]
-   description = "Availability Domain in us-sanjose-1 region"
+variable "ad_list" {
+  type        = list(any)
+  default     = ["HRGE:US-SANJOSE-1-AD-1"]
+  description = "Availability Domain in us-sanjose-1 region"
 }
 
 variable "instance_shape" {
@@ -46,8 +46,8 @@ variable "instance_shape" {
 }
 
 variable "ad-domain" {
-  type	  = string
-  default = "HRGE:US-SANJOSE-1-AD-1"
+  type        = string
+  default     = "HRGE:US-SANJOSE-1-AD-1"
   description = "Availability domain in san jose"
 }
 
@@ -187,69 +187,69 @@ variable "instance_image_ocid" {
 ## Certificates variables
 # LB-specific variables
 variable "lb_options" {
-  type              = object({
-    display_name    = string,
-    compartment_id  = string,
-    shape           = string,
-    subnet_ids      = list(string),
-    private         = bool,
-    nsg_ids         = list(string),
-    defined_tags    = map(string),
-    freeform_tags   = map(string)
+  type = object({
+    display_name   = string,
+    compartment_id = string,
+    shape          = string,
+    subnet_ids     = list(string),
+    private        = bool,
+    nsg_ids        = list(string),
+    defined_tags   = map(string),
+    freeform_tags  = map(string)
   })
-  description       = "Parameters for customizing the LB."
-  default           = {
-    display_name    = null
-    compartment_id  = null
-    shape           = null
-    subnet_ids      = null
-    private         = null
-    nsg_ids         = null
-    defined_tags    = null
-    freeform_tags   = null
+  description = "Parameters for customizing the LB."
+  default = {
+    display_name   = null
+    compartment_id = null
+    shape          = null
+    subnet_ids     = null
+    private        = null
+    nsg_ids        = null
+    defined_tags   = null
+    freeform_tags  = null
   }
 }
 
 # Certificates-specific variables
 variable "certificates" {
-  type                  = map(object({
-    ca_certificate      = string,
-    passphrase          = string,
-    private_key         = string,
-    public_certificate  = string,
+  type = map(object({
+    ca_certificate     = string,
+    passphrase         = string,
+    private_key        = string,
+    public_certificate = string,
   }))
-  description           = "Parameters for Certificates."
-  default               = {}
+  description = "Parameters for Certificates."
+  default     = {}
 }
 
 # Backend-sets-specific variables
 variable "backend_sets" {
-  type                  = map(object({
-    policy              = string,
-    health_check_name   = string,
-    enable_persistency  = bool,
-    cookie_name         = string,
-    disable_fallback    = bool,
-    enable_ssl          = bool,
-    certificate_name    = string,
-    verify_depth        = number,
+  type = map(object({
+    policy                  = string,
+    health_check_name       = string,
+    enable_persistency      = bool,
+    cookie_name             = string,
+    disable_fallback        = bool,
+    enable_ssl              = bool,
+    certificate_name        = string,
+    verify_depth            = number,
     verify_peer_certificate = bool,
-    backends            = map(object({
-      ip                = string,
-      port              = number,
-      backup            = bool,
-      drain             = bool,
-      offline           = bool,
-      weight            = number
+    backends = map(object({
+      ip      = string,
+      port    = number,
+      backup  = bool,
+      drain   = bool,
+      offline = bool,
+      weight  = number
     }))
   }))
-  description           = "Parameters for Backend Sets."
-  default               = {}
+  description = "Parameters for Backend Sets."
+  default     = {}
 }
 
 # Health Check variables
 variable "health_checks" {
-  type                  = map(object({
+  type = map(object({
     protocol            = string,
     interval_ms         = number,
     port                = number,
@@ -259,50 +259,50 @@ variable "health_checks" {
     timeout_in_millis   = number,
     url_path            = string
   }))
-  description           = "Parameters for health checks (used by Backend Sets)."
-  default               = {}
+  description = "Parameters for health checks (used by Backend Sets)."
+  default     = {}
 }
 
 # Path Route Set-specific variables
 variable "path_route_sets" {
-  type                  = map(list(object({
-    backend_set_name    = string,
-    path                = string,
+  type = map(list(object({
+    backend_set_name = string,
+    path             = string,
     # valid values: EXACT_MATCH, FORCE_LONGEST_PREFIX_MATCH, PREFIX_MATCH, SUFFIX_MATCH
-    match_type          = string
+    match_type = string
   })))
-  description           = "Parameters for Path Route Sets."
-  default               = {}
+  description = "Parameters for Path Route Sets."
+  default     = {}
 }
 
 # Rule Set-specific variables
 variable "rule_sets" {
-  type                  = map(list(object({
-    action              = string,
-    header              = string,
-    prefix              = string,
-    suffix              = string,
-    value               = string
+  type = map(list(object({
+    action = string,
+    header = string,
+    prefix = string,
+    suffix = string,
+    value  = string
   })))
-  description           = "Parameters for Rule Sets."
-  default               = {}
+  description = "Parameters for Rule Sets."
+  default     = {}
 }
 
 # Listener-specific variables
 variable "listeners" {
-  type                  = map(object({
+  type = map(object({
     default_backend_set_name = string,
-    port                = number,
-    protocol            = string,
-    idle_timeout        = number,
-    hostnames           = list(string),
-    path_route_set_name = string,
-    rule_set_names      = list(string),
-    enable_ssl          = bool,
-    certificate_name    = string,
-    verify_depth        = number,
-    verify_peer_certificate = bool
+    port                     = number,
+    protocol                 = string,
+    idle_timeout             = number,
+    hostnames                = list(string),
+    path_route_set_name      = string,
+    rule_set_names           = list(string),
+    enable_ssl               = bool,
+    certificate_name         = string,
+    verify_depth             = number,
+    verify_peer_certificate  = bool
   }))
-  description           = "Parameters for Listeners."
-  default               = {}
+  description = "Parameters for Listeners."
+  default     = {}
 }

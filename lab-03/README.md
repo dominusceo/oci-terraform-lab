@@ -1,9 +1,15 @@
 ---
 # LAB-03 - Oracle Cloud Infrastructure Ansible Collection
+Oracle Cloud Infrastructure Ansible Collection provides an easy way to provision and manage resources in Oracle Cloud Infrastructure using Ansible.
 
-Oracle Cloud Infrastructure Ansible Collection provides an easy way to provision and manage resources in Oracle Cloud using Ansible.
+OCI supports the use of Ansible modules to automate cloud infrastructure provisioning and configuration, orchestration of complex operational processes, and deployment and update of your software assets.
 
-> **This collection replaces the [legacy modules](https://github.com/oracle/oci-ansible-modules). Refer to the [Migration Guide](https://github.com/oracle/oci-ansible-collections/blob/master/MigrationGuide.md) for best migration practices.**
+Ansible tracks your resources using inventory lists. The inventory can be a simple static .ini file or dynamically created, where a plugin assembles an up-to-date infrastructure inventory. 
+
+Ansible playbooks automate configuration, deployment, and orchestration tasks. Ansible playbooks use a declarative language (YAML) that allows you to describe infrastructure configuration, deployment policy, and the orchestration of complex process steps. OCI provides a set of Example Playbooks for your review.
+
+> **The OCI Ansible collection supports Ansible Tower, AWX, and Oracle Linux Automation Manager.**
+> ** This collection replaces the [legacy modules](https://github.com/oracle/oci-ansible-modules). Refer to the [Migration Guide](https://github.com/oracle/oci-ansible-collections/blob/master/MigrationGuide.md) for best migration practices.**
 
 Ansible [released Collections](https://www.ansible.com/blog/getting-started-with-ansible-collections) as part of the Ansible 2.9 release.
 Ansible recommends Collections as the recommended method of packaging and releasing modules. 
@@ -26,7 +32,13 @@ For the complete list of supported services, please check the [modules list](htt
 
 ## Installation
 
-### Pre-requisites
+### Pre-requisites for Using Ansible with Oracle Cloud Infrastructure
+
+- You must have an Oracle Cloud Infrastructure account.
+- You must have a user in that account in a security group with a policy that grants necessary permissions for working with resources in the account compartments.
+- You must have the necessary credentials and OCID information.
+
+
 **python>=3.6**
 #### Oracle Linux 7
 
@@ -49,6 +61,20 @@ sudo yum install oci-ansible-collection
 curl -L https://raw.githubusercontent.com/oracle/oci-ansible-collection/master/scripts/install.sh | bash -s -- --verbose
 ```
 #### For more info about installation and troubleshooting check the [Installation Guide](https://github.com/oracle/oci-ansible-collections/blob/master/InstallationGuide.md).
+### Test the Installation
+
+To test the installation of the RPM and configuration of the SDK, you can run a sample Ansible playbook.
+
+### Oracle Linux 7
+If you're using Oracle Linux 7, use the following command to test your installation:
+```
+ansible-3 localhost -m oracle.oci.oci_object_storage_namespace_facts
+```
+### Oracle Linux 8
+If you're using Oracle Linux 8, use the following command to test your installation:
+```
+ansible localhost -m oracle.oci.oci_object_storage_namespace_facts
+```
 
 ## Samples and Solutions
 

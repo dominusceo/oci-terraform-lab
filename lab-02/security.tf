@@ -24,10 +24,10 @@ resource "oci_core_security_list" "test_security_list" {
       max = "8080"
     }
   }
-  ingress_security_rules{
+  ingress_security_rules {
     protocol = "6"
     source   = "0.0.0.0/0"
-    tcp_options{
+    tcp_options {
       min = "80"
       max = "80"
     }
@@ -41,10 +41,10 @@ resource "oci_core_security_list" "test_security_list" {
       max = "3620"
     }
   }
-  ingress_security_rules{
+  ingress_security_rules {
     protocol = "6"
     source   = "0.0.0.0/0"
-    tcp_options{
+    tcp_options {
       min = "443"
       max = "443"
     }
