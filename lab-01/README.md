@@ -134,4 +134,3 @@ $terraform destroy -auto-approve
 Once terraform has performed destroy operation, you should see something like this:
 
 ![OCI-LAB-01-DESTROY](../img/inlab-01/OCI-LAB-01-DESTROY.png)
-

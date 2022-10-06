@@ -9,9 +9,9 @@
   collections:
     - oracle.oci
   vars:
-    bob_name: "Bob"
-    bob_user_api_key_passphrase: "bobpassphrase"
-    bob_user_api_key_private_key_path: "{{ temp_certificates_path }}/bob_private_key.pem"
+    bob_name: "bub"
+    bob_user_api_key_passphrase: "bubpassphrase"
+    bob_user_api_key_private_key_path: "~/.ssh/tf-private.key"
     bob_user_api_key_pub_key_path: "{{ temp_certificates_path }}/bob_public_key.pem"
 
     object_readers_group_name: "object_readers_group"
@@ -106,12 +106,12 @@
            bob_api_signing_key_ocid: "{{ result.api_key.key_id }}"
            bob_api_signing_key_fingerprint: "{{ result.api_key.fingerprint }}"
 
-      - import_tasks: teardown.yaml
+      #- import_tasks: teardown.yaml
 
-      rescue:
+      #rescue:
 
-        - import_tasks: teardown.yaml
-          ignore_errors: yes
+      #   - import_tasks: teardown.yaml
+      #    ignore_errors: yes
 
-        - fail:
-            msg: "The sample execution failed."
+      # - fail:
+      #      msg: "The sample execution failed."

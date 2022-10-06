@@ -1,6 +1,6 @@
 ---
-# LAB-03 - Oracle Cloud Infrastructure Ansible Collection
-Oracle Cloud Infrastructure Ansible Collection provides an easy way to provision and manage resources in Oracle Cloud Infrastructure using Ansible.
+# LAB-03 - Terraform integration with Ansible
+For this lab, we are going to perform the integration of Terraform from OCI with Oracle Cloud Infrastructure Ansible Collection. Ansible Collections provides an easy way to provision and manage resources in Oracle Cloud Infrastructure using Ansible.
 
 OCI supports the use of Ansible modules to automate cloud infrastructure provisioning and configuration, orchestration of complex operational processes, and deployment and update of your software assets.
 
@@ -88,7 +88,15 @@ Begin by reviewing the Readme.md file that you will find in each sample's root d
 Module HTML documentation is available on [readthedocs.io](https://oci-ansible-collection.readthedocs.io/en/latest/collections/oracle/oci/index.html).
 
 To view the module documentation, use this command:
-  ``` bash
+```bash
 ansible-doc oracle.oci.[module_name]
-  ```
+```
 General documentation can be found [here](https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/ansible.htm).
+---
+# Execute Ansible  from Terraform
+```bash
+provisioner "local-exec" {
+   command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u {var.user} -i '${self.ipv4_address},' --private-key ${var.ansible_ssh_private_key} setup.yml"
+}
+```
+
