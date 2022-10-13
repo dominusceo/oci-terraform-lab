@@ -97,7 +97,7 @@ For the **LAB-02** the components can be depicted as follow:
 Access [LAB-02 Basic Deployment with OCI Resource Manager](https://github.com/dominusceo/oci-terraform-lab/tree/main/lab-02)
 
 ## Let's get started
-Clone the git project from Github, in order to perform the lab:
+Clone the git project from Github, in order to perform this labs:
 ```
 $git clone https://github.com/dominusceo/oci-terraform-lab.git
 ```

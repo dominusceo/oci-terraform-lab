@@ -176,12 +176,12 @@ EOF
 variable "instance_image_ocid" {
   type = map(string)
   default = {
-    # See https://docs.us-phoenix-1.oraclecloud.com/images/
-    # Oracle-provided image "Oracle-Linux-7.5-2018.10.16-0"
-    us-phoenix-1   = "ocid1.image.oc1.phx.aaaaaaaaoqj42sokaoh42l76wsyhn3k2beuntrh5maj3gmgmzeyr55zzrwwa"
-    us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaageeenzyuxgia726xur4ztaoxbxyjlxogdhreu3ngfj2gji3bayda"
-    eu-frankfurt-1 = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaaitzn6tdyjer7jl34h2ujz74jwy5nkbukbh55ekp6oyzwrtfa4zma"
-    uk-london-1    = "ocid1.image.oc1.uk-london-1.aaaaaaaa32voyikkkzfxyo4xbdmadc2dmvorfxxgdhpnk6dw64fa3l4jh7wa"
+    # See https://docs.oracle.com/en-us/iaas/images/image/4d8a588e-bb9d-428d-af29-245ec57aa41a/
+    # Oracle-provided image "Oracle-Linux-8.6-2022.08.29-0"
+    us-phoenix-1   = "ocid1.image.oc1.phx.aaaaaaaa3lzck3xxr3sjm2z3psdeyacwv4buumt26y4zdyrg5dylfgxireta"
+    us-ashburn-1   = "ocid1.image.oc1.iad.aaaaaaaasdqmcux7p5sdhhsqygmfzf2n6smemihykfv4bv7qh4235zre75da"
+    eu-frankfurt-1 = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaaoffnm7opezqbhzln3u4lzv6ujteag5h7oxcsio3kr35sp7mlamcq"
+    sa-santiago-1  = "ocid1.image.oc1.sa-santiago-1.aaaaaaaaq24fasno4jlzuxhwvxkxkbebdmkqestbz65hi4xgm6of5dlmztvq"
   }
 }
 ## Certificates variables

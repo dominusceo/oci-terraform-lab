@@ -45,11 +45,40 @@ variable "adDomain" {
   default     = "HRGE:US-SANJOSE-1-AD-1"
   description = "Availability domain in San Jose"
 }
+
 variable "ansible_user" {
   type        = string
   default     = "opc"
 }
+
+variable "instanceShape" {
+  type        = string
+  default     = "VM.Standard.E2.1.Micro"
+  description = "Virtual machine default shape"
+}
+
 variable "ansible_ssh_private_key" {
   type    = string
   default = "~/.ssh/tf-private.key"
+}
+
+variable "templates_path" {
+  type    = string
+  default = "./module/templates/"
+}
+
+variable "inventory_path" {
+  type    = string
+  default = "./module/inventory/"
+}
+
+variable "inventory_file" {
+  type    = string
+  default = "host.ini"
+}
+
+variable "grpIAMAdmin"{
+  type        = string
+  default     = "Administrators"
+  description = "Default Administrators in OCI console"
 }

@@ -50,5 +50,3 @@ resource "oci_core_route_table" "test_route_table" {
     destination       = "0.0.0.0/0"
   }
 }
-
-

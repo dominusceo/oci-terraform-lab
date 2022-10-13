@@ -96,7 +96,6 @@ General documentation can be found [here](https://docs.cloud.oracle.com/iaas/Con
 # Execute Ansible  from Terraform
 ```bash
 provisioner "local-exec" {
-   command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u {var.user} -i '${self.ipv4_address},' --private-key ${var.ansible_ssh_private_key} setup.yml"
+   command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ${var.user} -i '${self.ipv4_address},' --private-key ${var.ansible_ssh_private_key} setup.yml"
 }
 ```
-

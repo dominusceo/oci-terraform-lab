@@ -3,7 +3,7 @@
 For this lab, you can take the following architecture as reference, also you should consider 
 can check the [Oracle Architecture Center](https://docs.oracle.com/solutions/?q=terraform&cType=reference-architectures&sort=date-desc&lang=en) for more advanced examples of architectures to use through terraform.
 
-![OCI-INLAB-01](../img/lab-01/OCI-INLAB-01.png)
+![OCI-INLAB-01](../img/inlab-01/OCI-INLAB-01.png)
 
 ## LAB-01 #1 - VCN, route tables and subnet related creation
 Elements to create:
