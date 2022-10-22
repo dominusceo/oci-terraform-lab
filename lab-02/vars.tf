@@ -4,7 +4,6 @@ variable "compartment" {
   description = "Oracle Cloud Compute Compartment where the infra will be deployed"
 }
 
-
 variable "tenancy_ocid" {
   type        = string
   default     = "ocid1.tenancy.oc1..aaaaaaaar6q6nrtbkidcz6xnyl3lkqssk7c6nslpnu2mdjywtbppvz5txz2a"

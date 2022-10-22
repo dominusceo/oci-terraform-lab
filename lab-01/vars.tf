@@ -25,7 +25,7 @@ variable "fingerprint" {
 
 variable "private_key" {
   type    = string
-  default = "/home/ricardo.carrillo/.ssh/oci_api_private.pem"
+  default = "~/.ssh/oci_api_private.pem"
 }
 
 variable "oci_region" {
