@@ -15,6 +15,12 @@ terraform {
       version = "~>4.92"
     }
   }
+  cloud {
+    organization = "dominus-ceo"
+    workspaces {
+      name = "oracle"
+  }
+  
   backend "s3" {
     bucket                      = "bucket-terraform"
     key                         = "terraform.tfstate"
@@ -36,4 +42,5 @@ provider "oci" {
   private_key         = var.private_key
   private_key_path    = var.private_key
   config_file_profile = "ORACLESECURITY"
+}
 }

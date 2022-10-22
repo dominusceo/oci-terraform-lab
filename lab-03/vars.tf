@@ -4,7 +4,6 @@ variable "compartment" {
   description = "Oracle Cloud Compute Compartment where the infra will be deployed"
 }
 
-
 variable "tenancy_ocid" {
   type        = string
   default     = "ocid1.tenancy.oc1..aaaaaaaar6q6nrtbkidcz6xnyl3lkqssk7c6nslpnu2mdjywtbppvz5txz2a"
@@ -47,8 +46,8 @@ variable "adDomain" {
 }
 
 variable "ansible_user" {
-  type        = string
-  default     = "opc"
+  type    = string
+  default = "opc"
 }
 
 variable "instanceShape" {
@@ -77,8 +76,57 @@ variable "inventory_file" {
   default = "host.ini"
 }
 
-variable "grpIAMAdmin"{
+variable "grpIAMAdmin" {
   type        = string
   default     = "Administrators"
   description = "Default Administrators in OCI console"
+}
+
+variable "vnc_name" {
+  type        = string
+  default     = "vnc-inlab"
+  description = "OCI default name for the VCN to be created"
+}
+variable "dns_label_subnet" {
+  type        = string
+  default     = "private-subnet"
+  description = "OCI default dns dns_label_subnet"
+}
+
+variable "ig_name" {
+  type        = string
+  default     = "ig"
+  description = "OCI default internet gateway name"
+}
+variable "securitylist_name" {
+  type        = string
+  default     = "SL_lab"
+  description = "OCI default Security list Name"
+
+}
+variable "vcn_dns_label" {
+  type        = string
+  default     = "private-subnet"
+  description = "OCI default dns label for the resources"
+}
+variable "subnet_name" {
+  type        = string
+  default     = "private-subnet1"
+  description = "OCI default dns label for the resources"
+}
+
+variable "image_id" {
+  type        = string
+  default     = "ocid1.image.oc1.us-sanjose-1.aaaaaaaa3stdbyfdqhcdykpzf7ndzwudklnp77wo5lym7rp33ysspk6o2m4q"
+  description = "Default image id to be used on deployments" 
+}
+
+variable "domains" {
+  type = map(object({
+    domain_name = string,
+    port        = number,
+    hostnames   = list(string),
+  }))
+  description = "Parameters for Domains for the different servers."
+  default     = {}
 }

@@ -12,12 +12,12 @@ resource "oci_core_instance" "test_instance" {
 
   metadata = {
     ssh_authorized_keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCV5PvhexjNfIGBtC+j5Yu+aQk+cZ8Ua6tEy2X3tjkMiV4OurfYaH0A+0PCwwwRIb8AFyJxW4y9Cq2l+B0jExhPckUC42xr33U4fb/fDS8IgO8Y0pbkLF9PZbBDtgUNcp9mgheLic4W7bXYT1S1VhFkte1f4cq4gF/XsAnU+cj+1QBDr0FU2leoac87BheI6yGB/i7lSww6Fvpl4otThVuoC92tIuOXNMPSLBpsI+igNoA+4PUhySLix/4CKYBUYmmYsZX4+rN3qRRk+Z2JiosdVV6EndzeyChJ50TNxJVp7SIc6/YS+k/zsSx9d/W2W5rSDRB1WeEKMa+Q7RuKYxx/ terraform-ssh-key"
- }
- create_vnic_details {
+  }
+  create_vnic_details {
     subnet_id = oci_core_subnet.priv_subnet1.id
- }
+  }
 
-/*
+  /*
  connection {
     type        = "ssh"
     host        = "self.public_ip"
@@ -27,26 +27,26 @@ resource "oci_core_instance" "test_instance" {
     private_key = file("~/.ssh/tf-private.key")
  }
 */
- #depends_on = [local_file.inventory]
-/*  provisioner "local-exec" {
+  #depends_on = [local_file.inventory]
+  /*  provisioner "local-exec" {
     command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ${var.ansible_user} -i '${var.inventory_path}${var.inventory_file}' --private-key ${var.ansible_ssh_private_key} setup-terraform-infra.yaml -T 300 --extra-vars @ansible-vars.json"
   }
 */
 }
 
 resource "oci_core_instance_configuration" "test_instance" {
-  count = 2
+  count          = 2
   compartment_id = var.compartment
-  display_name = oci_core_instance.test_instance[count.index].display_name
+  display_name   = oci_core_instance.test_instance[count.index].display_name
   instance_details {
     instance_type = "compute"
     launch_details {
-    #compartment_id = var.compartment
-    freeform_tags = {"CostCenter"= "SJC"}
-       agent_config {
-         are_all_plugins_disabled = false
-         is_management_disabled   = false
-       }
+      #compartment_id = var.compartment
+      freeform_tags = { "CostCenter" = "SJC" }
+      agent_config {
+        are_all_plugins_disabled = false
+        is_management_disabled   = false
+      }
     }
   }
 }

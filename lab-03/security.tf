@@ -1,7 +1,7 @@
 resource "oci_core_security_list" "inlab_security-list" {
   compartment_id = var.compartment
   vcn_id         = oci_core_vcn.inlab_vcn.id
-  display_name   = "SL_lab"
+  display_name   = var.securitylist_name
   egress_security_rules {
     destination = "0.0.0.0/0"
     protocol    = "all"
